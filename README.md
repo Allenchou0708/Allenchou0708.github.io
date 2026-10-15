@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-# Allen Chou academic website
+# Yen-Lun Chou academic website
 
-這是一個可由 GitHub Pages 免費託管的 Jekyll 學術個人網站。首頁依照提供的參考頁面重建，所有畫面中的 `Alvin Zhu` 已先改為 `Allen Chou`。
+這是一個可由 GitHub Pages 免費託管的 Jekyll 學術個人網站。
 
-> 注意：目前的經歷、論文、社群連結、信箱、CV 與影片仍是參考站內容。正式公開前，請務必換成你自己的資料，以免造成身分或研究成果誤認。搜尋 `alvinzhu`、`alvister88` 與 `Allen Chou` 可快速找到需修改處。
+> 注意：正式公開前，請務必確認網站資料與連結都是最新版本。
 
 ## 最快上線方式（本專案）
 
@@ -76,7 +76,7 @@ assets/videos/your-project.mp4
 然後在 `index.html` 改為：
 
 ```html
-<img src="{{ '/assets/images/portrait.jpg' | relative_url }}" alt="Portrait of Allen Chou">
+<img src="{{ '/assets/images/portrait.jpg' | relative_url }}" alt="Portrait of Yen-Lun Chou">
 ```
 
 影片檔通常很大；若超過 GitHub 的檔案限制，建議改放 YouTube、Vimeo 或物件儲存服務，再嵌入頁面。

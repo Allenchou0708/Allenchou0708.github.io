@@ -120,3 +120,52 @@ a[href]:hover { text-decoration: underline; }
   .education-date, .education-location { align-self: flex-start; text-align: left; white-space: normal; }
 }
 
+/* Shared navigation and theme toggle */
+.header-actions { display: flex; align-items: center; gap: 18px; }
+.robot-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.theme-toggle { display: inline-flex; width: 36px; height: 36px; align-items: center; justify-content: center; padding: 0; border: 1px solid var(--border); border-radius: 10px; color: var(--ink); background: var(--card); cursor: pointer; font-size: 1.15rem; transition: transform .2s ease, background .2s ease; }
+.theme-toggle:hover { background: #f0e8e7; transform: translateY(-2px); }
+
+/* Make the profile placeholder track the height of the bio and social buttons. */
+.hero-grid { align-items: stretch; }
+.hero-content { display: flex; flex-direction: column; }
+.hero-media { align-self: stretch; height: auto; }
+.blue-placeholder { aspect-ratio: auto; min-height: 100%; }
+
+/* Interior pages */
+.page-main { min-height: calc(100vh - 178px); padding: 34px 0 64px; }
+.page-intro { margin-bottom: 24px; }
+.page-intro h1 { margin: 0 0 6px; font-family: "Varela Round", sans-serif; font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+.page-intro > p { margin: 0; color: var(--muted); }
+.publication-list { margin-top: 24px; }
+.publication-card { display: flex; gap: 24px; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.publication-card:last-child { border-bottom: 0; }
+.publication-thumb { flex: 0 0 180px; aspect-ratio: 1 / 1; border: 1px solid var(--border); border-radius: 6px; }
+.publication-thumb--red { background: #d94141; }
+.publication-body { flex: 1; min-width: 0; }
+.publication-body h2 { margin: 0; color: var(--ink); font-size: 1.08rem; line-height: 1.42; }
+.publication-authors, .publication-venue { margin: 7px 0 0; color: var(--muted); font-size: .92rem; }
+.publication-venue { color: var(--ink); }
+
+/* Dark mode */
+html[data-theme="dark"] { color-scheme: dark; --bg: #121416; --ink: #edf0f2; --muted: #c4c9ce; --blue: #83c5ff; --card: #1d2126; --border: #3c434c; --shadow: 0 12px 28px rgba(0, 0, 0, .28); }
+html[data-theme="dark"] .site-header { background: rgba(18, 20, 22, .9); }
+html[data-theme="dark"] .site-header a { color: var(--muted); }
+html[data-theme="dark"] .site-header .brand { color: var(--ink) !important; }
+html[data-theme="dark"] .site-header a:hover { color: var(--ink); }
+html[data-theme="dark"] .hero-media, html[data-theme="dark"] .education-item, html[data-theme="dark"] .contact-copy { background: var(--card); }
+html[data-theme="dark"] .hero-content h1, html[data-theme="dark"] .section-heading h2, html[data-theme="dark"] .page-intro h1 { color: var(--ink); }
+html[data-theme="dark"] .theme-toggle:hover { background: #303740; }
+html[data-theme="dark"] .btn.small { color: #121416; background: #edf0f2; border-color: #edf0f2; }
+html[data-theme="dark"] .publication-thumb { border-color: var(--border); }
+
+@media (max-width: 960px) {
+  .header-actions { width: 100%; justify-content: space-between; }
+}
+@media (max-width: 600px) {
+  .header-actions { align-items: flex-start; gap: 10px; }
+  .nav { max-width: calc(100% - 46px); }
+  .publication-card { flex-direction: column; gap: 12px; }
+  .publication-thumb { flex-basis: auto; width: min(100%, 240px); }
+}
+
