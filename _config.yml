@@ -1,0 +1,20 @@
+title: "Allen Chou"
+description: "Robotics researcher focused on robot learning, perception, and intelligent systems."
+url: "https://allenchou0708.github.io"
+baseurl: ""
+repository: "allenchou0708/allenchou0708.github.io"
+locale: "en-US"
+timezone: "Asia/Taipei"
+
+# GitHub Pages / Jekyll settings. This custom front page can also be copied into
+# an AcademicPages fork; see README.md for the exact workflow.
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
