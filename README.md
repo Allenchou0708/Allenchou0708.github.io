@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Allen Chou academic website
 
 這是一個可由 GitHub Pages 免費託管的 Jekyll 學術個人網站。首頁依照提供的參考頁面重建，所有畫面中的 `Alvin Zhu` 已先改為 `Allen Chou`。
@@ -80,3 +81,7 @@ assets/videos/your-project.mp4
 
 影片檔通常很大；若超過 GitHub 的檔案限制，建議改放 YouTube、Vimeo 或物件儲存服務，再嵌入頁面。
 
+=======
+# Allenchou0708.github.io
+This is my website
+>>>>>>> 325dac7e432aa5df99a4a2dba6c725349c913fdc
