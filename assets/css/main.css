@@ -223,5 +223,16 @@ html[data-theme="dark"] .cv-download { background: #83c5ff; color: #102338 !impo
   .publication-body { min-width: 0; }
   .publication-body h2 { font-size: .9rem; line-height: 1.35; }
   .publication-authors, .publication-venue { margin-top: 4px; font-size: .76rem; line-height: 1.35; }
+
+  .cv-page .work-info { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; }
+  .cv-page .work-date, .cv-page .work-location { align-self: baseline; text-align: right; white-space: nowrap; }
+  .cv-page .award-item { gap: .55em; padding: .55em .7em; }
+  .cv-page .award-content { flex-direction: row; align-items: center; justify-content: space-between; gap: .45em; }
+  .cv-page .award-item strong { font-size: .72rem; }
+  .cv-page .award-issuer { font-size: .64rem; text-align: right; white-space: nowrap; }
+  .cv-page .leadership-item { flex-direction: row; align-items: center; gap: .7em; }
+  .cv-page .leadership-year { align-self: center; padding: 2px 8px; line-height: 1.2; }
+
+  .compact-page { min-height: 0; padding-bottom: 16px; }
 }
 
