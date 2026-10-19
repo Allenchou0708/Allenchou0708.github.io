@@ -236,15 +236,15 @@ html[data-theme="dark"] .cv-download { background: #83c5ff; color: #102338 !impo
   .compact-page { min-height: 0; padding-bottom: 16px; }
 }
 
-/* iPad mini portrait (768px wide) only: keep the entire header on one line. */
-@media (width: 768px) {
+/* iPad mini portrait width: height varies when browser bars are visible. */
+@media (min-width: 760px) and (max-width: 780px) {
   .site-header .header-inner { flex-direction: row; align-items: center; gap: 12px; }
   .site-header .header-actions { width: auto; flex: 1 1 auto; justify-content: flex-end; align-items: center; }
   .site-header .nav { flex-wrap: nowrap; white-space: nowrap; }
 }
 
-/* 360 × 800 only: compact the header and prevent the listed CV/Contact overflows. */
-@media (width: 360px) and (height: 800px) {
+/* 360px phone width: height varies when browser bars are visible. */
+@media (min-width: 350px) and (max-width: 370px) {
   .site-header .header-inner { gap: 3px; }
   .site-header .brand { gap: 4px; font-size: .67rem; }
   .site-header .brand-icon { width: 20px; height: 20px; }
