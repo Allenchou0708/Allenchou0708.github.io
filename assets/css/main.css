@@ -197,3 +197,31 @@ html[data-theme="dark"] .publication-thumb { border-color: var(--border); }
 html[data-theme="dark"] .cv-download { background: #83c5ff; color: #102338 !important; } html[data-theme="dark"] .cv-download:hover { background: #b0daff; } html[data-theme="dark"] .work-role, html[data-theme="dark"] .work-detail a, html[data-theme="dark"] .skill-card-header, html[data-theme="dark"] .leadership-year, html[data-theme="dark"] .leadership-item strong { color: #83c5ff; } html[data-theme="dark"] .award-badge.gold { color: #f9df7f; background: #51420d; border-color: rgba(212,175,55,.3); } html[data-theme="dark"] .leadership-year { border-color: #477ab4; background: rgba(26,115,232,.15); }
 @media (max-width: 600px) { .cv-title-row { align-items: flex-start; flex-direction: column; }.work-info { grid-template-columns: 1fr; }.work-date, .work-location { text-align: left; white-space: normal; }.award-content { align-items: flex-start; flex-direction: column; gap: .2em; }.award-issuer { text-align: left; white-space: normal; }.skills-grid { grid-template-columns: 1fr; }.skill-card:nth-child(n) { grid-column: span 1; }.leadership-item { flex-direction: column; gap: .4em; }.leadership-year { align-self: flex-start; } }
 
+/* Phone-only layout: preserve the desktop information hierarchy in a compact row layout. */
+@media (max-width: 600px) {
+  .hero-media { align-self: center; height: auto; }
+  .hero-media img { height: auto; object-position: center; }
+
+  .education-info { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 1em; }
+  .education-date, .education-location { align-self: baseline; text-align: right; white-space: nowrap; }
+
+  .site-header .header-inner { flex-direction: row; align-items: center; gap: 5px; padding: 6px 0; }
+  .site-header .brand { flex: 0 0 auto; gap: 5px; font-size: .76rem; white-space: nowrap; }
+  .site-header .brand-icon { width: 22px; height: 22px; border-radius: 6px; }
+  .site-header .robot-icon svg { width: 14px; height: 14px; }
+  .site-header .header-actions { width: auto; flex: 1 1 auto; min-width: 0; justify-content: flex-end; align-items: center; gap: 5px; }
+  .site-header .nav { max-width: none; flex-wrap: nowrap; gap: 5px; font-size: .68rem; white-space: nowrap; }
+  .site-header .theme-toggle { flex: 0 0 20px; width: 20px; height: 20px; }
+  .site-header .theme-toggle svg { width: 14px; height: 14px; }
+
+  .site-footer { padding: 22px 0 28px; }
+  .site-footer .footer-inner { flex-wrap: nowrap; gap: 4px; font-size: clamp(.42rem, 1.9vw, .55rem); letter-spacing: -.03em; white-space: nowrap; }
+  .site-footer .footer-inner span { white-space: nowrap; }
+
+  .publication-card { flex-direction: row; align-items: flex-start; gap: 10px; }
+  .publication-thumb { flex: 0 0 105px; width: 105px; height: 105px; aspect-ratio: 1 / 1; }
+  .publication-body { min-width: 0; }
+  .publication-body h2 { font-size: .9rem; line-height: 1.35; }
+  .publication-authors, .publication-venue { margin-top: 4px; font-size: .76rem; line-height: 1.35; }
+}
+
