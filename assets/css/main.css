@@ -123,8 +123,9 @@ a[href]:hover { text-decoration: underline; }
 /* Shared navigation and theme toggle */
 .header-actions { display: flex; align-items: center; gap: 18px; }
 .robot-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
-.theme-toggle { display: inline-flex; width: 36px; height: 36px; align-items: center; justify-content: center; padding: 0; border: 1px solid var(--border); border-radius: 10px; color: var(--ink); background: var(--card); cursor: pointer; font-size: 1.15rem; transition: transform .2s ease, background .2s ease; }
-.theme-toggle:hover { background: #f0e8e7; transform: translateY(-2px); }
+.theme-toggle { display: inline-flex; width: 25px; height: 25px; align-items: center; justify-content: center; padding: 0; border: 0; color: var(--ink); background: transparent; cursor: pointer; transition: color .2s ease, transform .2s ease; }
+.theme-toggle:hover { color: var(--blue); transform: translateY(-1px); }
+.theme-toggle svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
 
 /* Make the profile placeholder track the height of the bio and social buttons. */
 .hero-grid { align-items: stretch; }
@@ -140,7 +141,8 @@ a[href]:hover { text-decoration: underline; }
 .publication-list { margin-top: 24px; }
 .publication-card { display: flex; gap: 24px; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
 .publication-card:last-child { border-bottom: 0; }
-.publication-thumb { flex: 0 0 180px; aspect-ratio: 1 / 1; border: 1px solid var(--border); border-radius: 6px; }
+.publication-thumb { flex: 0 0 180px; aspect-ratio: 1 / 1; overflow: hidden; border: 1px solid var(--border); border-radius: 6px; background: var(--card); }
+.publication-thumb img, .publication-thumb object { display: block; width: 100%; height: 100%; border: 0; object-fit: contain; }
 .publication-thumb--red { background: #d94141; }
 .publication-body { flex: 1; min-width: 0; }
 .publication-body h2 { margin: 0; color: var(--ink); font-size: 1.08rem; line-height: 1.42; }
@@ -155,7 +157,7 @@ html[data-theme="dark"] .site-header .brand { color: var(--ink) !important; }
 html[data-theme="dark"] .site-header a:hover { color: var(--ink); }
 html[data-theme="dark"] .hero-media, html[data-theme="dark"] .education-item, html[data-theme="dark"] .contact-copy { background: var(--card); }
 html[data-theme="dark"] .hero-content h1, html[data-theme="dark"] .section-heading h2, html[data-theme="dark"] .page-intro h1 { color: var(--ink); }
-html[data-theme="dark"] .theme-toggle:hover { background: #303740; }
+html[data-theme="dark"] .theme-toggle:hover { color: var(--blue); }
 html[data-theme="dark"] .btn.small { color: #121416; background: #edf0f2; border-color: #edf0f2; }
 html[data-theme="dark"] .publication-thumb { border-color: var(--border); }
 
